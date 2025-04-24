@@ -1,0 +1,37 @@
+from typing import Any, Generator
+
+from dify_plugin import Tool
+from dify_plugin.entities.tool import ToolInvokeMessage
+
+
+class DeepseekThoughtCleanTool(Tool):
+    def _invoke(
+        self, tool_parameters: dict[str, Any]
+    ) -> Generator[ToolInvokeMessage, None, None]:
+        """
+        invoke tools
+        """
+
+        # extract tool_parameters
+        provider = tool_parameters.get("provider", "").strip()
+        if not provider:
+            yield self.create_text_message("Invalid provider")
+        content = tool_parameters.get("content", "").strip()
+        if not content:
+            yield self.create_text_message("Invalid content")
+
+        try:
+            if provider == "deepseek":
+                answer = content.split("</details>")[-1]
+                reason = content.split("</details>")[0].split("</summary>")[-1]
+            elif provider == "volcengine":
+                answer = content.split("\n\n\n\n")[-1]
+                reason = content.split("\n\n\n\n")[0].replace("\n> ", "")
+            else:
+                answer = content
+                reason = ""
+            yield self.create_text_message(str(answer))
+            yield self.create_variable_message(variable_name="answer", variable_value=str(answer))
+            yield self.create_variable_message(variable_name="reason", variable_value=str(reason))
+        except Exception as e:
+            yield self.create_text_message(f"Failed to extract result, error: {str(e)}")

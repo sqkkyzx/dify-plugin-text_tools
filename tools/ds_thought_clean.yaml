@@ -1,0 +1,54 @@
+description:
+  human:
+    en_US: Deepseek Thought Chain Clean.
+    zh_Hans: Deepseek 思维链清理。
+  llm: Clean the content with the thinking process output by Deepseek into a clean reply.
+extra:
+  python:
+    source: tools/ds_thought_clean.py
+identity:
+  author: yizixuan
+  label:
+    en_US: Deepseek Thought Chain Clean
+    zh_Hans: Deepseek 思维链清理
+  name: ds_thought_clean
+parameters:
+  - name: provider
+    type: select
+    label:
+      en_US: LLM Provider
+      zh_Hans: 模型提供商
+    form: form
+    required: true
+    options:
+      - value: deepseek
+        label:
+          en_US: Deepseek
+          zh_Hans: 深度求索
+#      - value: volcengine
+#        label:
+#          en_US: volcengine
+#          zh_Hans: 火山方舟
+    default: deepseek
+    human_description:
+      en_US: The model provider output by the upstream LLM. The plugin will automatically use different cleaning methods according to the provider.
+      zh_Hans: 上游 LLM 输出的模型提供商，插件会自动根据提供商使用不同的清理方法。
+  - name: content
+    type: string
+    label:
+      en_US: LLM Output Content
+      zh_Hans: 上游 LLM 输出内容
+    form: llm
+    required: true
+    human_description:
+      en_US: LLM Output Content
+      zh_Hans: 上游 LLM 输出内容
+output_schema:
+  type: object
+  properties:
+    reason:
+      type: string
+      description: Thought Reason
+    answer:
+      type: string
+      description: Clean Answer
