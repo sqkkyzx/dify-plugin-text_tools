@@ -1,9 +1,9 @@
 identity:
   author: yizixuan
+  name: hash_calculator
   label:
     en_US: Hash Calculator
     zh_Hans: 哈希计算
-  name: hash_calculator
 description:
   human:
     en_US: Calculate the hash value of the input text using various algorithms such as MD5, SHA256, and SHA1.

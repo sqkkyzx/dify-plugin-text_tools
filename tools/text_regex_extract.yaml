@@ -1,9 +1,9 @@
 identity:
   author: yizixuan
+  name: text_regex_extract
   label:
     en_US: Text Regex Extract
     zh_Hans: 正则提取文本
-  name: text_regex_extract
 description:
   human:
     en_US: Use regular expressions to extract content from the text. For "text", output the first matching result, and for "json", output all matching results.

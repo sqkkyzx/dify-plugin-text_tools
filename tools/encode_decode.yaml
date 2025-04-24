@@ -1,9 +1,9 @@
 identity:
   author: yizixuan
+  name: encode_decode
   label:
     en_US: Encode Decode
     zh_Hans: 编码解码
-  name: encode_decode
 description:
   human:
     en_US: Encode or decode text using URL, Base64, or Unicode encoding/decoding.

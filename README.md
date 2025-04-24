@@ -1,5 +1,9 @@
 # 文本处理插件
 
+**Author:** yizixuan
+**Version:** 0.0.1
+**Type:** tool
+
 https://github.com/sqkkyzx/dify-plugin-text_tools
 
 本插件提供了一系列用于文本处理的工具，涵盖了正则表达式提取、文本替换、哈希计算、编码解码以及 Deepseek 思维链清理等功能，满足不同的文本处理需求。
@@ -51,13 +55,6 @@ https://github.com/sqkkyzx/dify-plugin-text_tools
 1. **安装插件**：将插件集添加到您的开发环境中。
 2. **调用工具**：根据需求选择相应的工具，并传入必要的参数。
 3. **获取结果**：工具将返回处理后的结果，您可以根据需要进行进一步的操作。
-
-
-## 贡献者
-
-- **作者**：yizixuan 
-
-如果您有任何问题或建议，请随时联系开发者。
 
 
 ---
@@ -115,10 +112,5 @@ This plugin provides a series of tools for text processing, covering functions s
 1. **Install the plugin**: Add the plugin set to your development environment.
 2. **Call the tool**: Select the appropriate tool according to your needs and pass in the necessary parameters.
 3. **Get the result**: The tool will return the processed result, and you can perform further operations as needed.
-
-
-## Contributors
-
-- **Author**: yizixuan 
 
 If you have any questions or suggestions, please feel free to contact the developer.

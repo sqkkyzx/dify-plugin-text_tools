@@ -1,3 +1,9 @@
+identity:
+  author: yizixuan
+  name: ds_thought_clean
+  label:
+    en_US: Deepseek Thought Chain Clean
+    zh_Hans: Deepseek 思维链清理
 description:
   human:
     en_US: Deepseek Thought Chain Clean.
@@ -6,12 +12,6 @@ description:
 extra:
   python:
     source: tools/ds_thought_clean.py
-identity:
-  author: yizixuan
-  label:
-    en_US: Deepseek Thought Chain Clean
-    zh_Hans: Deepseek 思维链清理
-  name: ds_thought_clean
 parameters:
   - name: provider
     type: select

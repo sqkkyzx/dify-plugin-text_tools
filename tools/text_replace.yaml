@@ -1,9 +1,9 @@
 identity:
   author: yizixuan
+  name: text_replace
   label:
     en_US: Text Replace
     zh_Hans: 文本替换
-  name: text_replace
 description:
   human:
     en_US: Replace all matches of a string with the target string.
