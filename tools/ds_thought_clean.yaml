@@ -2,11 +2,11 @@ identity:
   author: yizixuan
   name: ds_thought_clean
   label:
-    en_US: Deepseek Thought Chain Clean
+    en_US: Deepseek Thought Clean
     zh_Hans: Deepseek 思维链清理
 description:
   human:
-    en_US: Deepseek Thought Chain Clean.
+    en_US: Deepseek Thought Clean.
     zh_Hans: Deepseek 思维链清理。
   llm: Clean the content with the thinking process output by Deepseek into a clean reply.
 extra:
