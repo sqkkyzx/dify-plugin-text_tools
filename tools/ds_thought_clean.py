@@ -22,11 +22,11 @@ class DeepseekThoughtCleanTool(Tool):
 
         try:
             if provider == "deepseek":
-                answer = content.split("</details>")[-1]
-                reason = content.split("</details>")[0].split("</summary>")[-1]
-            elif provider == "volcengine":
-                answer = content.split("\n\n\n\n")[-1]
-                reason = content.split("\n\n\n\n")[0].replace("\n> ", "")
+                answer = content.split("</details>")[-1].strip()
+                reason = content.split("</details>")[0].split("</summary>")[-1].strip()
+            elif provider == "volcengine_0_0_12":
+                answer = content.split("</think>")[-1].strip()
+                reason = content.split("</think>")[0].split("<think>")[-1].strip()
             else:
                 answer = content
                 reason = ""
