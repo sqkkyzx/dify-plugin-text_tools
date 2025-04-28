@@ -24,7 +24,7 @@ class DeepseekThoughtCleanTool(Tool):
             if provider == "deepseek":
                 answer = content.split("</details>")[-1].strip()
                 reason = content.split("</details>")[0].split("</summary>")[-1].strip()
-            elif provider == "volcengine_0_0_12":
+            elif provider == "volcengine_0_0_12" or provider == "think_xml_tags":
                 answer = content.split("</think>")[-1].strip()
                 reason = content.split("</think>")[0].split("<think>")[-1].strip()
             else:

@@ -6,8 +6,8 @@ identity:
     zh_Hans: Deepseek 思维链清理
 description:
   human:
-    en_US: Deepseek Thought Clean.
-    zh_Hans: Deepseek 思维链清理。
+    en_US: Separate the output content of the Deepseek thinking model into answer and reason.
+    zh_Hans: 将 Deepseek 思考模型的输出内容，分离为 answer 和 reason.
   llm: Clean the content with the thinking process output by Deepseek into a clean reply.
 extra:
   python:
@@ -29,10 +29,14 @@ parameters:
         label:
           en_US: volcengine v0.0.12
           zh_Hans: 火山方舟 v0.0.12
+      - value: think_xml_tags
+        label:
+          en_US: <think> XML TAG
+          zh_Hans: <think> XML 标签
     default: deepseek
     human_description:
-      en_US: The model provider output by the upstream LLM. The plugin will automatically use different cleaning methods according to the provider.
-      zh_Hans: 上游 LLM 输出的模型提供商，插件会自动根据提供商使用不同的清理方法。
+      en_US: The model provider output by the upstream LLM. The plugin will automatically use different cleaning methods according to the provider. All outputs that use the <think> XML tag can choose think_xml_tags to extract.
+      zh_Hans: 上游 LLM 输出的模型提供商，插件会自动根据提供商使用不同的清理方法。所有使用 <think> XML 标签的输出，都可以选择 think_xml_tags 来提取。
   - name: content
     type: string
     label:
