@@ -1,7 +1,7 @@
 # TextTools Plugin For Dify
 
 **Author:** yizixuan
-**Version:** 0.0.2
+**Version:** 0.0.3
 **Type:** tool
 
 https://github.com/sqkkyzx/dify-plugin-text_tools
@@ -49,6 +49,11 @@ This plugin provides a series of tools for text processing, covering functions s
 - **Parameters**:
   - `provider`: Model provider, currently only supports `deepseek`, required.
   - `content`: Output content of the upstream LLM, required.
+
+### 6. Word Count (`word_count`)
+- **Function**: Count the number of lines, non-empty lines, characters, visible characters, Chinese characters, English words, English characters and characters excluding punctuation in the input text.
+- **Parameters**:
+  - `text`: The text to be counted, required.
 
 ## Instructions for use
 

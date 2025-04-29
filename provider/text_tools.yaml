@@ -20,3 +20,4 @@ tools:
   - tools/encode_decode.yaml
   - tools/hash_calculator.yaml
   - tools/ds_thought_clean.yaml
+  - tools/word_count.yaml
