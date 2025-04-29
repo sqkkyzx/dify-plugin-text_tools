@@ -45,10 +45,12 @@ This plugin provides a series of tools for text processing, covering functions s
   - `operation`: Operation type, optional `url_encode`, `url_decode`, `base64_encode`, `base64_decode`, `unicode_encode`, `unicode_decode`, required.
 
 ### 5. Deepseek thought chain cleaning (`ds_thought_clean`)
-- **Function**: Clean up the thought chain content output by Deepseek and generate a concise reply.
-- **Parameters**:
-  - `provider`: Model provider, currently only supports `deepseek`, required.
-  - `content`: Output content of the upstream LLM, required.
+- **Function**: Clean up the thought chain content output by Deepseek, Volcengine v0.0.12 and XML TAG models to generate concise replies.
+- **Parameters**: 
+  - `provider`: Supports new options:
+    - `deepseek` (default)
+    - `volcengine_0_0_12` (火山方舟 v0.0.12)
+    - `think_xml_tags` (通用XML标签提取)
 
 ### 6. Word Count (`word_count`)
 - **Function**: Count the number of lines, non-empty lines, characters, visible characters, Chinese characters, English words, English characters and characters excluding punctuation in the input text.
