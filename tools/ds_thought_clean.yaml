@@ -21,18 +21,18 @@ parameters:
     form: form
     required: true
     options:
-      - value: deepseek
-        label:
-          en_US: Deepseek
-          zh_Hans: 深度求索
-      - value: volcengine_0_0_12
-        label:
-          en_US: volcengine v0.0.12
-          zh_Hans: 火山方舟 v0.0.12
       - value: think_xml_tags
         label:
           en_US: <think> XML TAG
           zh_Hans: <think> XML 标签
+      - value: deepseek_0_0_5
+        label:
+          en_US: Deepseek v0.0.5
+          zh_Hans: 深度求索 v0.0.5
+      - value: volcengine_0_0_12
+        label:
+          en_US: volcengine v0.0.12
+          zh_Hans: 火山方舟 v0.0.12
     default: deepseek
     human_description:
       en_US: The model provider output by the upstream LLM. The plugin will automatically use different cleaning methods according to the provider. All outputs that use the <think> XML tag can choose think_xml_tags to extract.
